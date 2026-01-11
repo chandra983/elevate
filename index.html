@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ELEVATE | Premium Motivator & Performance Coach Indonesia</title>
+    <meta name="description" content="ELEVATE adalah partner strategis pengembangan SDM, Leadership Training, dan Executive Coaching berbasis performa tinggi untuk korporasi dan individu di Indonesia.">
+    <meta name="keywords" content="Motivator Indonesia, Leadership Training Jakarta, Executive Coaching, Corporate Seminar, Team Building, Pelatihan SDM, ELEVATE Coach">
+    <meta name="author" content="ELEVATE Indonesia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://elevate.id/" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elevate.id/">
+    <meta property="og:title" content="ELEVATE | Premium Motivator & Performance Coach">
+    <meta property="og:description" content="Bangkitkan potensi emas dalam diri tim Anda dengan strategi psikologi modern dan manajemen kinerja tinggi.">
+    <meta property="og:image" content="https://elevate.id/img/og-image.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://elevate.id/">
+    <meta property="twitter:title" content="ELEVATE | Premium Motivator & Performance Coach">
+    <meta property="twitter:description" content="Rekayasa ulang mindset dengan presisi. Solusi training korporasi terbaik di Indonesia.">
+    <meta property="twitter:image" content="https://elevate.id/img/og-image.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#030304">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "ELEVATE Motivator Agency",
+          "url": "https://elevate.id",
+          "logo": "https://elevate.id/img/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-812-3456-7890",
+            "contactType": "customer service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "sameAs": [
+            "https://facebook.com/elevate",
+            "https://instagram.com/elevate",
+            "https://linkedin.com/company/elevate"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apakah materi seminar bisa disesuaikan dengan kebutuhan perusahaan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu saja. Kami menggunakan pendekatan Tailor-Made Curriculum. Sebelum sesi dimulai, kami akan melakukan assessment kebutuhan untuk memastikan materi relevan dengan tantangan spesifik tim Anda."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Berapa lama durasi ideal untuk sesi training?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Durasi fleksibel mulai dari sesi motivasi singkat (2-3 jam), workshop satu hari (full-day), hingga bootcamp intensif (3 hari)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah tersedia sesi coaching online/virtual?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, kami menyediakan platform E-Learning dan Virtual Coaching menggunakan Zoom/Teams dengan standar broadcast profesional."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           DESIGN TOKENS & RESET
+           ========================================= */
+        :root {
+            /* Colors */
+            --bg-void: #030304;
+            --bg-surface: #0F1115;
+            --text-main: #FFFFFF;
+            --text-muted: #94A3B8;
+            --border-dim: rgba(255, 255, 255, 0.1);
+            
+            /* The Bitcoin Fire Palette */
+            --accent-orange: #F7931A;
+            --accent-burnt: #EA580C;
+            --accent-gold: #FFD600;
+
+            /* Gradients */
+            --grad-main: linear-gradient(to right, var(--accent-burnt), var(--accent-orange));
+            --grad-gold: linear-gradient(to right, var(--accent-orange), var(--accent-gold));
+
+            /* Glows & Shadows */
+            --shadow-orange: 0 0 20px -5px rgba(234, 88, 12, 0.5);
+            --shadow-gold: 0 0 20px rgba(255, 214, 0, 0.3);
+            
+            /* Typography */
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-void);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* =========================================
+           UTILITY CLASSES
+           ========================================= */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .text-gradient {
+            background: var(--grad-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .font-mono { font-family: var(--font-mono); }
+        .text-muted { color: var(--text-muted); }
+        .text-center { text-align: center; }
+
+        /* Background Grid Pattern */
+        .bg-grid {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background-size: 50px 50px;
+            background-image:
+                linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            pointer-events: none;
+        }
+
+        /* =========================================
+           COMPONENTS
+           ========================================= */
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 32px;
+            border-radius: 9999px; /* Pill shape */
+            font-weight: 600;
+            font-family: var(--font-body);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: var(--grad-main);
+            color: white;
+            box-shadow: var(--shadow-orange);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px -5px rgba(247, 147, 26, 0.8);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-orange);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Glass Cards */
+        .card {
+            background: rgba(15, 17, 21, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-dim);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(247, 147, 26, 0.5);
+            box-shadow: 0 10px 40px -10px rgba(247, 147, 26, 0.15);
+        }
+
+        /* Corner accents for cards */
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 20px; height: 20px;
+            border-top: 2px solid transparent;
+            border-left: 2px solid transparent;
+            transition: 0.3s;
+            border-radius: 14px 0 0 0;
+        }
+
+        .card:hover::after {
+            border-color: var(--accent-gold);
+        }
+
+        /* Section Spacing */
+        section {
+            padding: 6rem 0;
+        }
+
+        /* =========================================
+           LAYOUT & SECTIONS
+           ========================================= */
+        
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 1000;
+            background: rgba(3, 3, 4, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-dim);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex; align-items: center; gap: 0.5rem;
+            z-index: 1002;
+        }
+
+        .nav-links {
+            display: flex; gap: 2rem;
+        }
+        .nav-links a {
+            font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted);
+        }
+        .nav-links a:hover { color: var(--accent-orange); }
+
+        .nav-btn1 {
+            display: none;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-orange); }
+
+        /* =========================================
+           HERO
+           ========================================= */
+        .hero {
+            padding-top: 180px; padding-bottom: 100px;
+            position: relative; text-align: center;
+            overflow: hidden; /* Penting untuk orb */
+        }
+
+        .orb-container {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px; height: 600px;
+            z-index: -1; opacity: 0.3; pointer-events: none;
+        }
+        .orb {
+            width: 100%; height: 100%;
+            background: radial-gradient(circle, var(--accent-orange) 0%, transparent 70%);
+            filter: blur(80px);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem); /* Responsive Font */
+            margin-bottom: 1.5rem;
+        }
+        .hero p {
+            font-size: 1.1rem; color: var(--text-muted);
+            max-width: 600px; margin: 0 auto 2.5rem;
+        }
+
+        .stats-bar {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 2rem; max-width: 800px; margin: 4rem auto 0;
+            padding: 2rem; background: rgba(255,255,255,0.03);
+            border-radius: 16px; border: 1px solid var(--border-dim);
+        }
+        .stat-item h3 { font-size: 2.5rem; color: var(--accent-gold); font-family: var(--font-mono); }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 95%;
+            border-radius: 24px;
+            border: 1px solid var(--border-dim);
+            /* Grayscale to fit the dark theme */
+            filter: grayscale(100%) contrast(1.2); 
+            transition: 0.5s;
+        }
+
+        .about-image:hover img {
+            filter: grayscale(0%);
+            border-color: var(--accent-orange);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(234, 88, 12, 0.1);
+            border: 1px solid rgba(234, 88, 12, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--accent-orange);
+            font-size: 1.5rem;
+        }
+
+        /* Portfolio / Gallery */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            height: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-dim);
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+            filter: brightness(0.7);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(1);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%;
+            padding: 2rem;
+            background: linear-gradient(to top, black, transparent);
+            transform: translateY(100%);
+            transition: 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .quote-icon {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(180deg, rgba(3,3,4,0) 0%, rgba(247,147,26,0.1) 100%);
+            border-top: 1px solid var(--border-dim);
+            border-bottom: 1px solid var(--border-dim);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0;
+            background: #000;
+            border-top: 1px solid var(--border-dim);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-orange);
+            padding-left: 5px;
+        }
+
+        /* =========================================
+           FAQ SECTION STYLES (NEW)
+           ========================================= */
+        .faq-item {
+            background: rgba(15, 17, 21, 0.6);
+            border: 1px solid var(--border-dim);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        
+        .faq-item:hover {
+            border-color: rgba(247, 147, 26, 0.3);
+        }
+
+        .faq-header {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .faq-header:hover {
+            color: var(--accent-orange);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-body {
+            max-height: 200px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            color: var(--accent-orange);
+        }
+
+        /* =========================================
+           FLOATING BUTTONS
+           ========================================= */
+        .floating-controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .btn-float {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-float:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-wa {
+            background: var(--grad-main);
+            box-shadow: 0 0 20px #ea5a0cab;
+            border: none;
+        }
+
+        .btn-wa:hover {
+            box-shadow: 0 0 30px #f7941ac0;
+        }
+
+        .btn-top {
+            background: rgba(15, 17, 21, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-dim);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .btn-top:hover {
+            border-color: var(--accent-orange);
+            color: var(--accent-orange);
+        }
+
+        .btn-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           RESPONSIVE CSS
+           ========================================= */
+        @media (max-width: 1024px) {
+            .services-grid, .testimonial-grid, .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 4rem 0; }
+            .container { padding: 0 20px; }
+            .navbar { padding: 0.8rem 0; }
+            .nav-container { display: grid; grid-template-columns: 1fr auto; gap: 1rem; }
+            .nav-links {
+                grid-column: 1 / -1; display: flex; overflow-x: auto; white-space: nowrap;
+                padding-bottom: 5px; gap: 1.5rem; -webkit-overflow-scrolling: touch;
+                border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem;
+            }
+            .nav-links::-webkit-scrollbar { display: none; }
+            
+            .hero { padding-top: 140px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-btns { flex-direction: column; gap: 1rem; }
+            .btn { width: 100%; }
+            
+            .stats-bar { grid-template-columns: 1fr; gap: 2rem; margin-top: 3rem; text-align: center; }
+            .stat-item { padding-bottom: 1rem; border-bottom: 1px solid var(--border-dim); }
+            .stat-item:last-child { border-bottom: none; }
+
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .about-image { order: -1; }
+            .about-image img { width: 100%; }
+
+            .services-grid, .portfolio-grid, .testimonial-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            
+            #portfolio .container > div:first-child { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            #portfolio .btn-outline { width: 100%; text-align: center; }
+
+            .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .orb-container { width: 300px; height: 300px; }
+            .nav-btn1 { display: block; }
+            .nav-btn2 { display: none; }
+            .portfolio h4 { text-align: center; }
+
+            .floating-controls { bottom: 20px; right: 20px; gap: 10px; }
+            .btn-float { width: 45px; height: 45px; font-size: 1.3rem; }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.3; transform: scale(0.95); }
+            50% { opacity: 0.5; transform: scale(1.05); }
+            100% { opacity: 0.3; transform: scale(0.95); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand">
+                <i class="ph-fill ph-lightning" style="color: var(--accent-orange);"></i>
+                ELEVATE<span style="color: var(--accent-orange);">.</span>
+            </a>
+            
+            <a href="contact.html" class="nav-btn1 btn btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Book Now</a>
+
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">Tentang</a>
+                <a href="services.html">Layanan</a>
+                <a href="portfolio.html">Portofolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+
+            <a href="contact.html" class="nav-btn2 btn btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Book Now</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="orb-container"><div class="orb"></div></div>
+        
+        <div class="container">
+            <div style="margin-bottom: 1rem;">
+                <span style="border: 1px solid var(--accent-orange); padding: 5px 15px; border-radius: 20px; color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">
+                    Indonesia's #1 Performance Coach
+                </span>
+            </div>
+            
+            <h1>Bangkitkan Potensi <br><span class="text-gradient">Emas Dalam Diri</span></h1>
+            
+            <p>Rekayasa ulang mindset dengan presisi, strategi, dan mentalitas juara untuk hasil yang terukur.</p>
+            
+            <div class="hero-btns" style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <a href="contact.html" class="btn btn-primary">Mulai Transformasi</a>
+                <a href="service-detail.html" class="btn btn-outline">Lihat Layanan</a>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Seminar Sesi</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10k+</h3>
+                    <p>Alumni Sukses</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Rating Kepuasan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="img/about.webp" alt="Motivator Profile" width="500" height="500" loading="lazy">
+                    <div style="position: absolute; bottom: -20px; right: -20px; background: var(--bg-surface); padding: 20px; border: 1px solid var(--accent-orange); border-radius: 12px;">
+                        <span class="font-mono" style="color: var(--accent-gold); font-size: 1.5rem; font-weight: 700;">10+ Tahun</span>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Pengalaman</div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h4 style="color: var(--accent-orange); font-family: var(--font-mono); margin-bottom: 1rem;">SIAPA KAMI</h4>
+                    <h2>Arsitek Keberhasilan <span class="text-gradient">Masa Depan</span> Anda</h2>
+                    <p style="color: var(--text-muted); margin: 1.5rem 0;">
+                        Kami tidak percaya pada keberuntungan. Kami percaya pada pola, kedisiplinan, dan eksekusi. Di ELEVATE, kami menggabungkan psikologi modern dengan strategi manajemen berkinerja tinggi.
+                    </p>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                        Metode kami dirancang untuk membongkar blok mental dan memasang "software" baru yang berorientasi pada hasil dan pertumbuhan eksponensial.
+                    </p>
+                    <ul style="display: grid; gap: 1rem;">
+                        <li style="display: flex; gap: 10px; align-items: center;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--accent-gold);"></i>
+                            <span>Character Building & Mental Toughness</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; align-items: center;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--accent-gold);"></i>
+                            <span>Corporate Leadership Strategy</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; align-items: center;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--accent-gold);"></i>
+                            <span>Personal Branding Mastery</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+                <h4 style="color: var(--accent-orange); font-family: var(--font-mono);">LAYANAN</h4>
+                <h2>Program <span class="text-gradient">Unggulan</span></h2>
+                <p class="text-muted">Pilih modul yang sesuai dengan target pertumbuhan Anda atau perusahaan Anda.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="card">
+                    <div class="service-icon">
+                        <i class="ph-fill ph-microphone-stage"></i>
+                    </div>
+                    <h3>Corporate Seminar</h3>
+                    <p class="text-muted" style="margin: 1rem 0;">
+                        Suntikan energi dan strategi baru untuk tim perusahaan. Fokus pada kerjasama tim, sales drive, dan leadership.
+                    </p>
+                    <a href="service-detail.html" style="color: var(--accent-orange); font-weight: 600; display: flex; align-items: center; gap: 5px;">
+                        Detail Program <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="card" style="border-color: rgba(247, 147, 26, 0.4);">
+                    <div class="service-icon" style="background: rgba(255, 214, 0, 0.1); color: var(--accent-gold); border-color: rgba(255, 214, 0, 0.3);">
+                        <i class="ph-fill ph-crown"></i>
+                    </div>
+                    <h3>Executive Coaching</h3>
+                    <p class="text-muted" style="margin: 1rem 0;">
+                        Pendampingan 1-on-1 eksklusif untuk CEO dan Top Level Management. Mempertajam visi dan pengambilan keputusan.
+                    </p>
+                    <a href="service-detail.html" style="color: var(--accent-gold); font-weight: 600; display: flex; align-items: center; gap: 5px;">
+                        Detail Program <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="service-icon">
+                        <i class="ph-fill ph-student"></i>
+                    </div>
+                    <h3>Youth Bootcamp</h3>
+                    <p class="text-muted" style="margin: 1rem 0;">
+                        Pelatihan intensif untuk mahasiswa dan pemuda. Membangun karakter tangguh dan siap menghadapi dunia profesional.
+                    </p>
+                    <a href="service-detail.html" style="color: var(--accent-orange); font-weight: 600; display: flex; align-items: center; gap: 5px;">
+                        Detail Program <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+                <div>
+                    <h4 style="color: var(--accent-orange); font-family: var(--font-mono);">GALERI & JEJAK</h4>
+                    <h2>Momen <span class="text-gradient">Transformasi</span></h2>
+                </div>
+                <a href="portfolio.html" class="btn btn-outline">Lihat Semua Galeri</a>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="img/galeri1.webp" alt="Seminar Jakarta" width="400" height="300" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h4 style="color:white;">Grand Seminar Jakarta</h4>
+                        <p class="font-mono text-muted text-sm">Audience: 500 Pax</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/galeri2.webp" alt="Training Bali" width="400" height="300" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h4 style="color:white;">Corporate Training Bali</h4>
+                        <p class="font-mono text-muted text-sm">Client: Bank Nasional</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/galeri3.webp" alt="Bootcamp Surabaya" width="400" height="300" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h4 style="color:white;">Leadership Bootcamp</h4>
+                        <p class="font-mono text-muted text-sm">Surabaya, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" style="background: linear-gradient(180deg, rgba(3,3,4,0) 0%, rgba(247,147,26,0.05) 100%);">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Frequently Asked <span class="text-gradient">Questions</span></h2>
+            
+            <div class="faq-grid" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Apakah materi seminar bisa disesuaikan dengan kebutuhan perusahaan?</span>
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Tentu saja. Kami menggunakan pendekatan "Tailor-Made Curriculum". Sebelum sesi dimulai, kami akan melakukan assessment kebutuhan untuk memastikan materi relevan dengan tantangan spesifik tim Anda.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Berapa lama durasi ideal untuk sesi training?</span>
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Durasi fleksibel mulai dari sesi motivasi singkat (2-3 jam), workshop satu hari (full-day), hingga bootcamp intensif (3 hari). Kami akan merekomendasikan durasi terbaik berdasarkan goals yang ingin dicapai.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Apakah tersedia sesi coaching online/virtual?</span>
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Ya, kami menyediakan platform E-Learning dan Virtual Coaching menggunakan Zoom/Teams dengan standar broadcast profesional agar interaksi tetap hidup dan tidak membosankan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Bagaimana cara booking jadwal coach?</span>
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Anda bisa langsung menghubungi kami melalui WhatsApp atau tombol "Book Now" di website ini. Tim kami akan segera mengecek ketersediaan jadwal dan mengirimkan proposal penawaran.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Kata Mereka Tentang <span class="text-gradient">ELEVATE</span></h2>
+            
+            <div class="testimonial-grid">
+                <div class="card">
+                    <i class="ph-fill ph-quotes quote-icon"></i>
+                    <p class="text-muted">"Materi yang disampaikan sangat 'daging'. Bukan sekadar kata-kata manis, tapi strategi nyata yang bisa langsung diterapkan di perusahaan kami."</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #333; border-radius: 50%;"></div>
+                        <div>
+                            <h5 style="color: white; margin-bottom: 2px;">Budi Santoso</h5>
+                            <span class="font-mono text-muted" style="font-size: 0.8rem;">CEO Tech Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <i class="ph-fill ph-quotes quote-icon"></i>
+                    <p class="text-muted">"Energi yang dibawa sangat luar biasa. Tim sales kami langsung mengalami kenaikan performa 30% di bulan berikutnya."</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #333; border-radius: 50%;"></div>
+                        <div>
+                            <h5 style="color: white; margin-bottom: 2px;">Siti Aminah</h5>
+                            <span class="font-mono text-muted" style="font-size: 0.8rem;">HR Manager</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="ph-fill ph-quotes quote-icon"></i>
+                    <p class="text-muted">"Saya pikir ini seminar biasa, ternyata mindset saya dibongkar habis-habisan. Sangat direkomendasikan untuk leader muda."</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #333; border-radius: 50%;"></div>
+                        <div>
+                            <h5 style="color: white; margin-bottom: 2px;">Andi Pratama</h5>
+                            <span class="font-mono text-muted" style="font-size: 0.8rem;">Young Entrepreneur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Siap Menjadi Versi <span style="color: var(--accent-gold);">Terbaik?</span></h2>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto 2.5rem;">
+                Jangan biarkan potensi Anda terkubur. Jadwalkan sesi konsultasi gratis sekarang dan lihat peta jalan kesuksesan Anda.
+            </p>
+            <a href="contact.html" class="btn btn-primary" style="padding: 16px 48px; font-size: 1.1rem;">Hubungi Kami</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="brand" style="margin-bottom: 1.5rem; display: block;">
+                        <i class="ph-fill ph-lightning" style="color: var(--accent-orange);"></i>
+                        ELEVATE.
+                    </a>
+                    <p class="text-muted" style="max-width: 300px;">
+                        Partner strategis pengembangan sumber daya manusia berbasis performa tinggi dan karakter emas.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="portfolio.html">Portofolio</a></li>
+                        <li><a href="contact.html">Hubungi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">In-House Training</a></li>
+                        <li><a href="#">Public Seminar</a></li>
+                        <li><a href="#">Coaching Clinic</a></li>
+                        <li><a href="#">Team Building</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><a href="#">hello@elevate.id</a></li>
+                        <li><a href="#">+62 812 3456 7890</a></li>
+                        <li><a href="#">Jakarta Selatan, ID</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid var(--border-dim); margin-top: 4rem; padding-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+                &copy; 2025 Elevate Motivator Agency. All Rights Reserved. Designed with Precision.
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-controls">
+        <div class="btn-float btn-top" id="scrollTopBtn" onclick="scrollToTop()">
+            <i class="ph-bold ph-arrow-up"></i>
+        </div>
+        
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn-float btn-wa" title="Hubungi via WhatsApp">
+            <i class="ph-fill ph-whatsapp-logo"></i>
+        </a>
+    </div>
+
+    <script>
+        // Scroll to Top Logic
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // FAQ Toggle Logic (New)
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            
+            // Optional: Close other FAQs when one opens
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(i => {
+                if (i !== item) i.classList.remove('active');
+            });
+            
+            item.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

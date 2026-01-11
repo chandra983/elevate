@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tentang Kami | ELEVATE Premium Coach & Motivator Agency</title>
+    <meta name="description" content="Mengenal ELEVATE: Agensi pengembangan SDM berbasis sains dan psikologi modern. Kami membantu korporasi mencetak pemimpin berkarakter emas dengan metode terukur.">
+    <meta name="keywords" content="Tentang ELEVATE, Profil Coach Adrian, Visi Misi Elevate, Motivator Perusahaan, Leadership Training Indonesia, Pengembangan SDM">
+    <meta name="author" content="ELEVATE Indonesia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://elevate.id/about.html" />
+
+    <meta property="og:type" content="article"> <meta property="og:url" content="https://elevate.id/about.html">
+    <meta property="og:title" content="Tentang ELEVATE | Di Balik Layar Transformasi">
+    <meta property="og:description" content="Kami bukan sekadar motivator. Kami adalah insinyur potensi manusia yang menggunakan data, psikologi, dan strategi terukur.">
+    <meta property="og:image" content="https://elevate.id/img/og-about.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://elevate.id/about.html">
+    <meta property="twitter:title" content="Tentang ELEVATE | Di Balik Layar Transformasi">
+    <meta property="twitter:description" content="Mengenal filosofi dan metode di balik ELEVATE Motivator Agency.">
+    <meta property="twitter:image" content="https://elevate.id/img/og-about.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#030304">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "ELEVATE Motivator Agency",
+          "url": "https://elevate.id",
+          "logo": "https://elevate.id/img/logo.png",
+          "foundingDate": "2015",
+          "founder": {
+            "@type": "Person",
+            "name": "Coach Adrian"
+          },
+          "description": "Partner strategis pengembangan sumber daya manusia berbasis performa tinggi dan karakter emas."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://elevate.id/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tentang Kami",
+              "item": "https://elevate.id/about.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           DESIGN TOKENS (Sama persis dengan Index)
+           ========================================= */
+        :root {
+            --bg-void: #030304;
+            --bg-surface: #0F1115;
+            --text-main: #FFFFFF;
+            --text-muted: #94A3B8;
+            --border-dim: rgba(255, 255, 255, 0.1);
+            
+            --accent-orange: #F7931A;
+            --accent-burnt: #EA580C;
+            --accent-gold: #FFD600;
+
+            --grad-main: linear-gradient(to right, var(--accent-burnt), var(--accent-orange));
+            --grad-gold: linear-gradient(to right, var(--accent-orange), var(--accent-gold));
+
+            --shadow-orange: 0 0 20px -5px rgba(234, 88, 12, 0.5);
+            --shadow-gold: 0 0 20px rgba(255, 214, 0, 0.3);
+            
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-void);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { display: block; max-width: 100%; height: auto; }
+
+        /* Utility Classes */
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .text-gradient {
+            background: var(--grad-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .font-mono { font-family: var(--font-mono); }
+        .text-muted { color: var(--text-muted); }
+        .text-center { text-align: center; }
+
+        /* Background Grid */
+        .bg-grid {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background-size: 50px 50px;
+            background-image:
+                linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        /* Buttons (Index Style) */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 12px 32px; border-radius: 9999px; font-weight: 600;
+            font-family: var(--font-body); letter-spacing: 0.05em; text-transform: uppercase;
+            cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem;
+        }
+        .btn-primary { background: var(--grad-main); color: white; box-shadow: var(--shadow-orange); border: none; }
+        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 30px -5px rgba(247, 147, 26, 0.8); }
+
+        /* Section Spacing */
+        section { padding: 6rem 0; }
+
+        /* =========================================
+           NAVBAR (Persis Index.html)
+           ========================================= */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: rgba(3, 3, 4, 0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-dim); padding: 1rem 0;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .brand {
+            font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700;
+            display: flex; align-items: center; gap: 0.5rem; z-index: 1002;
+        }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-orange); }
+        .nav-btn1 { display: none; } /* Mobile button hidden on desktop */
+
+        /* =========================================
+           ABOUT PAGE SPECIFIC STYLES
+           ========================================= */
+        
+        /* Hero About */
+        .hero-about { padding-top: 180px; padding-bottom: 80px; text-align: center; }
+        .hero-about h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; }
+        .hero-label {
+            border: 1px solid var(--accent-orange); padding: 5px 15px; border-radius: 20px;
+            color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 2px; display: inline-block; margin-bottom: 1.5rem;
+        }
+
+        /* Profile Grid Layout */
+        .profile-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+            align-items: start; margin-top: 2rem;
+        }
+
+        .profile-img-container { position: relative; }
+        
+        .profile-img {
+            width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 20px;
+            filter: grayscale(100%) contrast(1.1); border: 1px solid var(--border-dim);
+            transition: 0.5s;
+        }
+        .profile-img:hover { filter: grayscale(0%); border-color: var(--accent-orange); }
+
+        .stats-badge {
+            position: absolute; bottom: 30px; left: -20px;
+            background: var(--bg-surface); border: 1px solid var(--accent-gold);
+            padding: 1.5rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Visi Misi Cards */
+        .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .vm-card {
+            background: rgba(15, 17, 21, 0.6); backdrop-filter: blur(12px);
+            border: 1px solid var(--border-dim); border-radius: 16px; padding: 2.5rem;
+            transition: 0.3s;
+        }
+        .vm-card:hover { border-color: var(--accent-orange); transform: translateY(-5px); }
+        .vm-icon { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1.5rem; }
+
+        /* Why Choose Us */
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .feature-item {
+            border-left: 1px solid var(--border-dim); padding-left: 1.5rem; transition: 0.3s;
+        }
+        .feature-item:hover { border-left-color: var(--accent-orange); padding-left: 2rem; }
+        .feature-item h4 { color: white; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px; }
+
+        /* Timeline (Blockchain Style) */
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+        .timeline::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--accent-orange), transparent); opacity: 0.3;
+        }
+        .timeline-item { position: relative; padding-left: 3rem; padding-bottom: 4rem; }
+        .timeline-dot {
+            position: absolute; left: -6px; top: 5px; width: 13px; height: 13px;
+            background: var(--bg-void); border: 2px solid var(--accent-orange);
+            border-radius: 50%; box-shadow: 0 0 10px var(--accent-orange); z-index: 2;
+        }
+        .timeline-date { font-family: var(--font-mono); color: var(--accent-gold); font-size: 0.9rem; margin-bottom: 0.5rem; display: block; }
+
+        /* Footer & CTA (Persis Index) */
+        .cta-section { text-align: center; border-y: 1px solid var(--border-dim); background: linear-gradient(180deg, rgba(3,3,4,0), rgba(247,147,26,0.1)); }
+        footer { padding: 4rem 0; background: #000; border-top: 1px solid var(--border-dim); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; }
+        .footer-col h4 { color: white; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-col ul li a:hover { color: var(--accent-orange); padding-left: 5px; }
+
+        /* =========================================
+           FLOATING BUTTONS (Persis Index)
+           ========================================= */
+        .floating-controls {
+            position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999;
+        }
+        .btn-float {
+            width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.5rem; cursor: pointer; transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);
+        }
+        .btn-float:hover { transform: scale(1.1); }
+        .btn-wa { background: var(--grad-main); box-shadow: 0 0 20px #ea5a0cab; border: none; }
+        .btn-wa:hover { box-shadow: 0 0 30px #f7941ac0; }
+        .btn-top {
+            background: rgba(15, 17, 21, 0.7); backdrop-filter: blur(10px); border: 1px solid var(--border-dim);
+            opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.4s ease;
+        }
+        .btn-top:hover { border-color: var(--accent-orange); color: var(--accent-orange); }
+        .btn-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+
+        /* =========================================
+           MOBILE & RESPONSIVE CSS
+           ========================================= */
+        @media (max-width: 768px) {
+            /* Global Adjustments */
+            section { padding: 4rem 0; }
+            .container { padding: 0 20px; }
+            
+            /* Navbar Mobile (Scroll Horizontal) */
+            .navbar { padding: 0.8rem 0; }
+            .nav-container { display: grid; grid-template-columns: 1fr auto; gap: 1rem; }
+            .nav-links {
+                grid-column: 1 / -1; display: flex; overflow-x: auto; white-space: nowrap;
+                padding-bottom: 5px; gap: 1.5rem; -webkit-overflow-scrolling: touch;
+                border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem;
+            }
+            .nav-links::-webkit-scrollbar { display: none; }
+            .nav-btn1 { display: block; } /* Show mobile btn */
+            .nav-btn2 { display: none; } /* Hide desktop btn */
+
+            /* About Specific Mobile Adjustments */
+            .hero-about { padding-top: 140px; }
+            
+            /* FITUR BARU: Gambar Profile Pindah ke Atas */
+            .profile-grid { 
+                display: flex; 
+                flex-direction: column; 
+                gap: 2rem; 
+            }
+            .profile-img-container { 
+                order: -1; /* Membuat gambar muncul sebelum teks */
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .stats-badge { left: 0; bottom: -20px; width: 100%; }
+
+            /* Grids lainnya */
+            .vm-grid, .why-grid, .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            
+            /* Floating controls mobile pos */
+            .floating-controls { bottom: 20px; right: 20px; gap: 10px; }
+            .btn-float { width: 45px; height: 45px; font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <i class="ph-fill ph-lightning" style="color: var(--accent-orange);"></i>
+                ELEVATE<span style="color: var(--accent-orange);">.</span>
+            </a>
+            
+            <a href="contact.html" class="nav-btn1 btn btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Book Now</a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active" style="color: var(--accent-orange);">Tentang</a>
+                <a href="services.html">Layanan</a>
+                <a href="portfolio.html">Portofolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+
+            <a href="contact.html" class="nav-btn2 btn btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Book Now</a>
+        </div>
+    </nav>
+
+    <section class="hero-about">
+        <div class="container">
+            <span class="hero-label">The Philosophy</span>
+            <h1>Di Balik Layar <span class="text-gradient">Transformasi</span></h1>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto;">
+                Kami bukan sekadar motivator. Kami adalah insinyur potensi manusia yang menggunakan data, psikologi, dan strategi terukur.
+            </p>
+
+            <div class="profile-grid">
+                <div style="text-align: left;">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 2rem;">Mengkalibrasi Ulang <br> <span style="color: var(--accent-orange);">Mindset Juara</span></h3>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">
+                        Didirikan pada tahun 2015, ELEVATE lahir dari sebuah keresahan: banyak program motivasi hanya memberikan "gula darah" sementara—semangat sesaat yang hilang dalam 24 jam.
+                    </p>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">
+                        Pendekatan kami berbeda. Kami melihat manusia seperti sebuah sistem operasi yang canggih. Jika ada *bug* dalam pola pikir (mindset), maka *output* (perilaku & hasil) tidak akan maksimal.
+                    </p>
+                    <p class="text-muted">
+                        Misi kami adalah menginstal "protokol" baru dalam kepemimpinan dan produktivitas Anda, memastikan pertumbuhan yang eksponensial dan permanen.
+                    </p>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-dim); display: flex; gap: 2rem;">
+                        <div>
+                            <span class="font-mono" style="color: var(--accent-gold); font-size: 1.5rem; font-weight: 700;">10+</span>
+                            <div class="text-muted text-sm">Tahun Pengalaman</div>
+                        </div>
+                        <div>
+                            <span class="font-mono" style="color: var(--accent-gold); font-size: 1.5rem; font-weight: 700;">300+</span>
+                            <div class="text-muted text-sm">Perusahaan Klien</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-img-container">
+                    <img src="img/profile.webp" alt="Team Meeting" class="profile-img" width="600" height="600">
+                    <div class="stats-badge">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="ph-fill ph-certificate" style="font-size: 2rem; color: var(--accent-orange);"></i>
+                            <div>
+                                <h4 style="margin-bottom: 2px;">Certified</h4>
+                                <span class="font-mono text-muted text-sm">Global NLP Master</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="visi-misi" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="vm-grid">
+                <div class="vm-card">
+                    <i class="ph-fill ph-eye vm-icon"></i>
+                    <h3>Visi Kami</h3>
+                    <p class="text-muted" style="margin-top: 1rem;">
+                        Menjadi katalisator utama dalam mencetak 1 juta pemimpin berkarakter emas yang mampu bersaing di kancah global pada tahun 2030.
+                    </p>
+                </div>
+                <div class="vm-card" style="border-color: rgba(247,147,26,0.3);">
+                    <i class="ph-fill ph-rocket-launch vm-icon" style="color: var(--accent-orange);"></i>
+                    <h3>Misi Kami</h3>
+                    <p class="text-muted" style="margin-top: 1rem;">
+                        Menyediakan cetak biru (blueprint) pengembangan diri yang praktis, berbasis sains, dan relevan dengan tantangan industri modern.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Mengapa <span class="text-gradient">ELEVATE?</span></h2>
+            
+            <div class="why-grid">
+                <div class="feature-item">
+                    <h4><i class="ph-fill ph-brain" style="color: var(--accent-gold);"></i> Science Based</h4>
+                    <p class="text-muted text-sm">Materi disusun berdasarkan psikologi perilaku dan neuro-sains, bukan sekadar intuisi.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="ph-fill ph-chart-line-up" style="color: var(--accent-orange);"></i> Measurable</h4>
+                    <p class="text-muted text-sm">Kami menggunakan KPI sebelum dan sesudah training untuk mengukur dampak.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="ph-fill ph-users-three" style="color: var(--accent-gold);"></i> Tailored</h4>
+                    <p class="text-muted text-sm">Modul kami disesuaikan sepenuhnya dengan kultur perusahaan Anda.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="ph-fill ph-lightning" style="color: var(--accent-orange);"></i> High Energy</h4>
+                    <p class="text-muted text-sm">Penyampaian yang dinamis, interaktif, dan memicu adrenalin.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="ph-fill ph-shield-check" style="color: var(--accent-gold);"></i> Proven Legacy</h4>
+                    <p class="text-muted text-sm">Dipercaya oleh BUMN, Multinasional, dan Startup Unicorn di Indonesia.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="ph-fill ph-infinity" style="color: var(--accent-orange);"></i> Post-Training</h4>
+                    <p class="text-muted text-sm">Pendampingan pasca-pelatihan untuk memastikan materi benar-benar diterapkan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 4rem;">Jejak <span class="text-gradient">Langkah</span></h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">BLOCK: 2015</span>
+                    <h3>Inisiasi Kode Awal</h3>
+                    <p class="text-muted">ELEVATE didirikan di sebuah garasi kecil dengan visi sederhana: merubah cara orang Indonesia melihat potensi diri.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">BLOCK: 2018</span>
+                    <h3>Ekspansi Nasional</h3>
+                    <p class="text-muted">Berhasil menangani klien korporat BUMN pertama dan membuka cabang operasional di Jakarta & Surabaya.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">BLOCK: 2020</span>
+                    <h3>Digital Adaptation Protocol</h3>
+                    <p class="text-muted">Saat pandemi melanda, kami meluncurkan platform E-Learning dan Virtual Coaching yang kini menjadi standar industri.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--accent-gold); box-shadow: 0 0 15px var(--accent-gold); border-color: white;"></div>
+                    <span class="timeline-date" style="color: white;">BLOCK: 2024 - PRESENT</span>
+                    <h3 style="color: var(--accent-gold);">The Golden Era</h3>
+                    <p class="text-muted">Mencapai 10.000 alumni dan meluncurkan program eksklusif "Executive Gold Class" untuk C-Level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Siap Menjadi Versi <span style="color: var(--accent-gold);">Terbaik?</span></h2>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto 2.5rem;">
+                Jangan biarkan potensi Anda terkubur. Jadwalkan sesi konsultasi gratis sekarang dan lihat peta jalan kesuksesan Anda.
+            </p>
+            <a href="contact.html" class="btn btn-primary" style="padding: 16px 48px; font-size: 1.1rem;">Hubungi Kami</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="brand" style="margin-bottom: 1.5rem; display: block;">
+                        <i class="ph-fill ph-lightning" style="color: var(--accent-orange);"></i>
+                        ELEVATE.
+                    </a>
+                    <p class="text-muted" style="max-width: 300px;">
+                        Partner strategis pengembangan sumber daya manusia berbasis performa tinggi dan karakter emas.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="about.html" style="color: var(--accent-orange);">Tentang Kami</a></li>
+                        <li><a href="index.html#services">Layanan</a></li>
+                        <li><a href="index.html#portfolio">Portofolio</a></li>
+                        <li><a href="contact.html">hubungi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">In-House Training</a></li>
+                        <li><a href="#">Public Seminar</a></li>
+                        <li><a href="#">Coaching Clinic</a></li>
+                        <li><a href="#">Team Building</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><a href="#">hello@elevate.id</a></li>
+                        <li><a href="#">+62 812 3456 7890</a></li>
+                        <li><a href="#">Jakarta Selatan, ID</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid var(--border-dim); margin-top: 4rem; padding-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+                &copy; 2025 Elevate Motivator Agency. All Rights Reserved. Designed with Precision.
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-controls">
+        <div class="btn-float btn-top" id="scrollTopBtn" onclick="scrollToTop()">
+            <i class="ph-bold ph-arrow-up"></i>
+        </div>
+        
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn-float btn-wa" title="Hubungi via WhatsApp">
+            <i class="ph-fill ph-whatsapp-logo"></i>
+        </a>
+    </div>
+
+    <script>
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>
