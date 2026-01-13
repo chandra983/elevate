@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Work: Fokus Tanpa Distraksi | ELEVATE Blog</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        /* =========================================
+           DESIGN TOKENS (Sama persis dengan blog-detail.html)
+           ========================================= */
+        :root {
+            --bg-void: #030304;
+            --bg-surface: #0F1115;
+            --text-main: #FFFFFF;
+            --text-muted: #94A3B8;
+            --border-dim: rgba(255, 255, 255, 0.1);
+            --accent-orange: #F7931A;
+            --accent-burnt: #EA580C;
+            --accent-gold: #FFD600;
+            --grad-main: linear-gradient(to right, var(--accent-burnt), var(--accent-orange));
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-void);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; color: white; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { display: block; max-width: 100%; height: auto; }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .text-gradient {
+            background: linear-gradient(to right, var(--accent-orange), var(--accent-gold));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;
+        }
+        .text-muted { color: var(--text-muted); }
+        .font-mono { font-family: var(--font-mono); }
+
+        .bg-grid {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 12px 32px; border-radius: 9999px; font-weight: 600; cursor: pointer;
+            transition: all 0.3s ease; font-size: 0.9rem; border: none;
+        }
+        .btn-primary { background: var(--grad-main); color: white; box-shadow: 0 0 20px -5px rgba(234, 88, 12, 0.5); }
+        .btn-primary:hover { transform: scale(1.02); box-shadow: 0 0 30px -5px rgba(247, 147, 26, 0.8); }
+
+        /* Navbar */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: rgba(3, 3, 4, 0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-dim); padding: 1rem 0;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-orange); }
+        .nav-btn1 { display: none; }
+
+        /* Blog Detail Specific */
+        .article-header { padding-top: 160px; padding-bottom: 40px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .article-meta {
+            font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-orange); margin-bottom: 1rem;
+            display: flex; gap: 1rem; justify-content: center; align-items: center;
+        }
+        .article-title { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; line-height: 1.2; }
+        
+        .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; padding-bottom: 6rem; }
+
+        .main-img-wrapper {
+            width: 100%; height: auto; border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--border-dim); margin-bottom: 10px;
+        }
+        .main-img-wrapper img { width: 100%; }
+        .img-caption {
+            font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);
+            text-align: center; margin-bottom: 3rem; display: block;
+        }
+
+        .article-content { color: #d1d5db; font-size: 1.1rem; }
+        .article-content h2 { font-size: 2rem; margin-top: 3rem; margin-bottom: 1.5rem; color: white; scroll-margin-top: 120px; }
+        .article-content h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: white; scroll-margin-top: 120px; }
+        .article-content p { margin-bottom: 1.5rem; line-height: 1.8; }
+        
+        .styled-quote {
+            border-left: 4px solid var(--accent-gold);
+            background: linear-gradient(90deg, rgba(255,214,0,0.05), transparent);
+            padding: 2rem; margin: 2.5rem 0; border-radius: 0 16px 16px 0;
+            font-size: 1.25rem; font-style: italic; color: white; font-family: var(--font-heading);
+        }
+        .styled-quote cite {
+            display: block; margin-top: 1rem; font-size: 0.9rem; color: var(--accent-orange); font-style: normal; font-family: var(--font-mono);
+        }
+
+        .read-also-block {
+            background: rgba(15,17,21,0.6); border: 1px solid var(--border-dim);
+            padding: 1.5rem; border-radius: 12px; margin: 2rem 0;
+        }
+        .read-also-label {
+            font-family: var(--font-mono); color: var(--accent-orange); font-size: 0.8rem; margin-bottom: 0.5rem; display: block;
+        }
+        .read-also-list { list-style: none; margin: 0; padding: 0; }
+        .read-also-list li { margin-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem; }
+        .read-also-list li:last-child { border: none; padding-bottom: 0; margin: 0; }
+        .read-also-list a { font-weight: 600; color: white; display: flex; align-items: center; gap: 8px; }
+        .read-also-list a:hover { color: var(--accent-gold); gap: 12px; }
+
+        .faq-item {
+            border: 1px solid var(--border-dim); border-radius: 12px; margin-bottom: 1rem;
+            background: rgba(255,255,255,0.02); overflow: hidden;
+        }
+        .faq-header {
+            padding: 1.2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+            font-weight: 600; color: white; transition: 0.3s;
+        }
+        .faq-header:hover { background: rgba(255,255,255,0.05); }
+        .faq-body {
+            max-height: 0; overflow: hidden; transition: 0.4s ease; padding: 0 1.2rem;
+            color: var(--text-muted); font-size: 0.95rem;
+        }
+        .faq-item.active .faq-body { max-height: 300px; padding-bottom: 1.2rem; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); color: var(--accent-orange); }
+
+        .author-box {
+            display: flex; gap: 1.5rem; align-items: center;
+            background: rgba(15,17,21,0.6); padding: 2rem; border-radius: 16px;
+            border: 1px solid var(--border-dim); margin-top: 4rem;
+        }
+        .author-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-orange); }
+        
+        .share-section {
+            margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-dim);
+            display: flex; flex-direction: column; gap: 1rem; align-items: center;
+        }
+        .share-btns { display: flex; gap: 1rem; }
+        .share-btn {
+            width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-dim);
+            display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; transition: 0.3s;
+        }
+        .share-btn:hover { background: var(--accent-orange); border-color: var(--accent-orange); transform: translateY(-3px); }
+
+        .sidebar-sticky { position: sticky; top: 120px; align-self: start; }
+        
+        .toc-widget {
+            background: rgba(15,17,21,0.6); border: 1px solid var(--border-dim);
+            border-radius: 16px; overflow: hidden; margin-bottom: 2rem;
+        }
+        .toc-header {
+            padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-dim);
+            display: flex; justify-content: space-between; align-items: center;
+            cursor: pointer; background: rgba(255,255,255,0.02);
+        }
+        .toc-content { padding: 1rem 0; max-height: 500px; overflow-y: auto; transition: 0.3s; }
+        .toc-content.collapsed { max-height: 0; padding: 0; }
+        .toc-list { list-style: none; padding: 0; margin: 0; }
+        .toc-link {
+            display: block; padding: 8px 1.5rem; color: var(--text-muted); font-size: 0.9rem;
+            transition: 0.2s; border-left: 2px solid transparent;
+        }
+        .toc-link:hover, .toc-link.active { color: var(--accent-orange); border-left-color: var(--accent-orange); background: rgba(247,147,26,0.05); }
+        .toc-link.h3 { padding-left: 2.5rem; font-size: 0.85rem; }
+
+        /* Promo GIF in Sidebar */
+        .promo-gif {
+            width: 100%; border-radius: 12px; border: 1px solid var(--border-dim);
+            margin: 0; overflow: hidden; position: relative; height: 300px;
+        }
+        .promo-placeholder {
+            width: 100%; height: 100%; background: linear-gradient(45deg, #0F1115, #1a0b02);
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+        }
+        .promo-placeholder::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer { 100% { left: 200%; } }
+
+        .related-section { padding-top: 4rem; border-top: 1px solid var(--border-dim); margin-top: 4rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+        
+        .r-card {
+            background: #0F1115; border-radius: 12px; border: 1px solid var(--border-dim); overflow: hidden;
+            display: flex; flex-direction: column; transition: 0.3s;
+        }
+        .r-card:hover { transform: translateY(-5px); border-color: var(--accent-orange); }
+        .r-img { height: 180px; width: 100%; object-fit: cover; }
+        .r-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .r-btn { margin-top: auto; color: var(--accent-orange); font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; }
+
+        footer { padding: 4rem 0; background: #000; border-top: 1px solid var(--border-dim); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; }
+        .footer-col h4 { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-col ul li a:hover { color: var(--accent-orange); padding-left: 5px; }
+
+        .floating-controls { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
+        .btn-float { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); }
+        .btn-float:hover { transform: scale(1.1); }
+        .btn-wa { background: var(--grad-main); box-shadow: 0 0 20px #ea5a0cab; border: none; }
+        .btn-top { background: rgba(15, 17, 21, 0.7); backdrop-filter: blur(10px); border: 1px solid var(--border-dim); opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.4s ease; }
+        .btn-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+
+        @media (max-width: 900px) {
+            .article-layout { grid-template-columns: 1fr; }
+            .sidebar-sticky { position: static; margin-bottom: 3rem; order: -1; }
+            .related-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .navbar { padding: 0.8rem 0; }
+            .nav-container { display: grid; grid-template-columns: 1fr auto; gap: 1rem; }
+            .nav-links { grid-column: 1 / -1; display: flex; overflow-x: auto; white-space: nowrap; padding-bottom: 5px; gap: 1.5rem; -webkit-overflow-scrolling: touch; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem; }
+            .nav-links::-webkit-scrollbar { display: none; }
+            .nav-btn1 { display: block; } 
+            .nav-btn2 { display: none; }
+            .article-title { font-size: 2rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .author-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <i class="ph-fill ph-lightning" style="color: var(--accent-orange);"></i>
+                ELEVATE<span style="color: var(--accent-orange);">.</span>
+            </a>
+            <a href="contact.html" class="nav-btn1 btn btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Book Now</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">Tentang</a>
+                <a href="services.html">Layanan</a>
+                <a href="portfolio.html">Portofolio</a>
+                <a href="blog.html" class="active" style="color: var(--accent-orange);">Blog</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+            <a href="contact.html" class="nav-btn2 btn btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Book Now</a>
+        </div>
+    </nav>
+
+    <header class="article-header container">
+        <div class="article-meta">
+            <span><i class="ph-bold ph-calendar"></i> 28 Dec 2025</span>
+            <span><i class="ph-bold ph-tag"></i> PRODUCTIVITY</span>
+            <span><i class="ph-bold ph-clock"></i> 7 Min Read</span>
+        </div>
+        <h1 class="article-title">Deep Work: <br><span class="text-gradient">Fokus Tanpa Distraksi</span></h1>
+        <p class="text-muted" style="font-size: 1.1rem;">Menguasai *skill* langka di abad 21 untuk melipatgandakan produktivitas dan kualitas kerja.</p>
+    </header>
+
+    <div class="container article-layout">
+        
+        <main>
+            <figure class="main-img-wrapper">
+                <img src="img/blog/blog3.webp" alt="Deep Work Focus">
+            </figure>
+            <span class="img-caption">Gambar 1: Ilustrasi lingkungan kerja yang minim distraksi untuk Deep Work.</span>
+
+            <div class="article-content" id="articleBody">
+                <p>
+                    Di dunia yang penuh notifikasi WhatsApp, email, dan Slack, kemampuan untuk fokus mendalam (*Deep Work*) menjadi kekuatan super (*superpower*) yang semakin langka. Cal Newport mendefinisikan Deep Work sebagai aktivitas profesional dalam kondisi konsentrasi penuh tanpa gangguan yang mendorong kemampuan kognitif ke batas maksimal.
+                </p>
+
+                <blockquote class="styled-quote">
+                    "Kualitas kerja yang dihasilkan = (Waktu yang dihabiskan) x (Intensitas Fokus)."
+                    <cite>— Cal Newport, Author of Deep Work</cite>
+                </blockquote>
+
+                <h2 id="shallow-vs-deep">Jebakan Shallow Work</h2>
+                <p>
+                    Kebanyakan pekerja modern terjebak dalam *Shallow Work*: tugas logistik yang tidak menuntut kognitif tinggi dan sering dilakukan sambil terdistraksi. Contoh: membalas email instan, meeting tanpa agenda jelas, atau *scrolling* media sosial. Ini membuat kita merasa "sibuk", tapi sebenarnya tidak produktif secara hasil.
+                </p>
+
+                <div class="read-also-block">
+                    <span class="read-also-label">BACA JUGA:</span>
+                    <ul class="read-also-list">
+                        <li><a href="blog-detail.html"><i class="ph-bold ph-link"></i> 5 Pilar Kepemimpinan Digital</a></li>
+                        <li><a href="blog-limiting-belief.html"><i class="ph-bold ph-link"></i> Membongkar Limiting Belief Anda</a></li>
+                    </ul>
+                </div>
+
+                <h2 id="strategi-deep">4 Filosofi Deep Work</h2>
+                <p>
+                    Untuk mengimplementasikan Deep Work, pilih salah satu filosofi yang sesuai dengan gaya hidup Anda:
+                </p>
+                <ul>
+                    <li><strong>Monastic:</strong> Mengisolasi diri sepenuhnya (seperti biarawan). Cocok untuk penulis buku atau peneliti.</li>
+                    <li><strong>Bimodal:</strong> Membagi waktu secara ekstrem (misal: 4 hari deep work, 1 hari admin).</li>
+                    <li><strong>Rhythmic:</strong> Jadwal rutin harian (misal: jam 05.00 - 08.00 pagi setiap hari fokus kerja).</li>
+                    <li><strong>Journalistic:</strong> Masuk ke mode fokus kapanpun ada waktu luang (sulit untuk pemula).</li>
+                </ul>
+
+                <h2 id="tips-praktis">Tips Praktis Memulai</h2>
+                <p>
+                    1. <strong>Jadwalkan blok waktu</strong> di kalender dan lindungi seperti meeting penting.<br>
+                    2. <strong>Matikan notifikasi</strong> HP atau taruh di ruangan lain.<br>
+                    3. <strong>Tentukan target spesifik</strong> untuk sesi tersebut (misal: "Selesaikan Bab 1 Laporan").<br>
+                    4. <strong>Latih "kebosanan"</strong>. Jangan langsung buka HP saat antre atau menunggu. Biarkan otak beristirahat.
+                </p>
+
+                <h2 id="faq">FAQ</h2>
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        Berapa lama durasi ideal Deep Work untuk pemula?
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        Untuk pemula, mulailah dengan 60-90 menit. Otak manusia biasanya maksimal fokus dalam blok 4 jam sehari. Jangan memaksakan diri di awal.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        Bagaimana jika pekerjaan saya menuntut respon cepat?
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        Komunikasikan dengan tim Anda. Minta "jendela waktu" (misal: jam 9-11 pagi) di mana Anda tidak bisa diganggu, lalu balas pesan setelah sesi selesai.
+                    </div>
+                </div>
+
+                <h2 id="kesimpulan">Kesimpulan</h2>
+                <p>
+                    Deep Work bukan tentang bekerja lebih keras, tapi bekerja lebih cerdas. Dengan melindungi atensi Anda, Anda bisa menghasilkan output berkualitas tinggi dalam waktu yang lebih singkat, menyisakan waktu untuk istirahat yang berkualitas.
+                </p>
+            </div>
+
+            <div class="share-section">
+                <span class="text-muted font-mono" style="font-size: 0.9rem;">BAGIKAN ARTIKEL INI:</span>
+                <div class="share-btns">
+                    <a href="#" onclick="shareToWA()" class="share-btn" title="Share ke WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+                    <a href="#" class="share-btn" title="Share ke LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="#" class="share-btn" title="Share ke Twitter"><i class="ph-fill ph-twitter-logo"></i></a>
+                    <a href="#" class="share-btn" title="Copy Link"><i class="ph-fill ph-link"></i></a>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <img src="img/about.webp" alt="Author" class="author-img">
+                <div>
+                    <h4 style="margin-bottom: 5px;">Ditulis oleh: Coach Adrian</h4>
+                    <span class="font-mono text-muted" style="font-size: 0.8rem; display: block; margin-bottom: 10px;">FOUNDER & MASTER TRAINER</span>
+                    <p class="text-muted" style="font-size: 0.9rem;">
+                        Praktisi produktivitas dan manajemen waktu untuk eksekutif. Menggabungkan neuro-sains dengan strategi manajemen modern.
+                    </p>
+                </div>
+            </div>
+
+        </main>
+
+        <aside class="sidebar-sticky">
+            <div class="toc-widget">
+                <div class="toc-header" onclick="toggleToc()">
+                    <span style="font-weight: 600; color: white;">DAFTAR ISI</span>
+                    <i class="ph-bold ph-caret-up" id="tocIcon"></i>
+                </div>
+                <div class="toc-content" id="tocContent">
+                    <ul class="toc-list" id="tocList">
+                        </ul>
+                </div>
+            </div>
+
+            <div class="promo-gif">
+                <div class="promo-placeholder">
+                    <div style="text-align: center; padding: 1rem;">
+                        <i class="ph-duotone ph-clock" style="font-size: 3rem; color: var(--accent-orange);"></i>
+                        <h4 style="margin: 1rem 0; color: white;">Master Your Time</h4>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%;">Join Productivity Class</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <section class="related-section container">
+        <h3 style="border-left: 4px solid var(--accent-orange); padding-left: 1rem;">Artikel Terkait</h3>
+        <div class="related-grid">
+            
+            <div class="r-card">
+                <img src="img/blog/blog1.webp" class="r-img" alt="Leadership">
+                <div class="r-content">
+                    <h4 style="color: white; margin-bottom: 0.5rem;">5 Pilar Kepemimpinan Digital</h4>
+                    <p class="text-muted" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Strategi memimpin tim remote dengan empati dan data.</p>
+                    <a href="blog-detail.html" class="r-btn">Baca Selengkapnya <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="r-card">
+                <img src="img/blog/blog2.webp" class="r-img" alt="Mindset">
+                <div class="r-content">
+                    <h4 style="color: white; margin-bottom: 0.5rem;">Membongkar Limiting Belief</h4>
+                    <p class="text-muted" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Teknik psikologi untuk menghancurkan tembok mental Anda.</p>
+                    <a href="blog-limiting-belief.html" class="r-btn">Baca Selengkapnya <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="r-card">
+                <img src="img/blog/blog6.webp" class="r-img" alt="Career">
+                <div class="r-content">
+                    <h4 style="color: white; margin-bottom: 0.5rem;">Negosiasi Gaji dengan Data</h4>
+                    <p class="text-muted" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Cara mendapatkan kompensasi yang adil di tempat kerja.</p>
+                    <a href="blog-salary-negotiation.html" class="r-btn">Baca Selengkapnya <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="brand" style="margin-bottom: 1.5rem; display: block;">
+                        <i class="ph-fill ph-lightning" style="color: var(--accent-orange);"></i> ELEVATE.
+                    </a>
+                    <p class="text-muted" style="max-width: 300px;">Partner strategis pengembangan sumber daya manusia berbasis performa tinggi.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="portfolio.html">Portofolio</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">In-House Training</a></li>
+                        <li><a href="#">Public Seminar</a></li>
+                        <li><a href="#">Coaching Clinic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><a href="#">hello@elevate.id</a></li>
+                        <li><a href="#">+62 812 3456 7890</a></li>
+                        <li><a href="#">Jakarta Selatan, ID</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid var(--border-dim); margin-top: 4rem; padding-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+                © 2025 Elevate Motivator Agency. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-controls">
+        <div class="btn-float btn-top" id="scrollTopBtn" onclick="scrollToTop()"><i class="ph-bold ph-arrow-up"></i></div>
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn-float btn-wa"><i class="ph-fill ph-whatsapp-logo"></i></a>
+    </div>
+
+    <script>
+        // 1. Scroll to Top
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+        // 2. FAQ Toggle
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
+        }
+
+        // 3. Share to WA
+        function shareToWA() {
+            const url = window.location.href;
+            const text = `Baca artikel menarik ini dari ELEVATE: ${document.title} - ${url}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // 4. AUTO GENERATE TOC with Active Highlight
+        document.addEventListener('DOMContentLoaded', function() {
+            const articleBody = document.getElementById('articleBody');
+            const tocList = document.getElementById('tocList');
+            const headings = articleBody.querySelectorAll('h2, h3');
+
+            headings.forEach((heading, index) => {
+                if (!heading.id) {
+                    heading.id = `toc-${index}`;
+                }
+
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = `#${heading.id}`;
+                a.textContent = heading.textContent;
+                a.classList.add('toc-link');
+                
+                if (heading.tagName === 'H3') {
+                    a.classList.add('h3');
+                }
+
+                a.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.getElementById(heading.id).scrollIntoView({ behavior: 'smooth' });
+                });
+
+                li.appendChild(a);
+                tocList.appendChild(li);
+            });
+
+            // Highlight Active TOC on Scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '-100px 0px -60% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        document.querySelectorAll('.toc-link').forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            headings.forEach(heading => observer.observe(heading));
+        });
+
+        // Toggle TOC Minimize
+        function toggleToc() {
+            const content = document.getElementById('tocContent');
+            const icon = document.getElementById('tocIcon');
+            content.classList.toggle('collapsed');
+            
+            if(content.classList.contains('collapsed')) {
+                icon.classList.remove('ph-caret-up');
+                icon.classList.add('ph-caret-down');
+            } else {
+                icon.classList.remove('ph-caret-down');
+                icon.classList.add('ph-caret-up');
+            }
+        }
+    </script>
+
+</body>
+</html>
