@@ -3,86 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Blog & Insights | ELEVATE Premium Coach</title>
-    <meta name="description" content="Pusat wawasan leadership, produktivitas, sales mindset, dan strategi karir. Baca artikel terbaru dari Coach Adrian dan tim ahli ELEVATE.">
-    <meta name="keywords" content="Blog Leadership Indonesia, Artikel Motivasi Kerja, Tips Produktivitas, Strategi Sales B2B, Public Speaking Tips, ELEVATE Insights">
-    <meta name="author" content="ELEVATE Indonesia">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://elevate.id/blog.html" />
-
-    <meta property="og:type" content="blog">
-    <meta property="og:url" content="https://elevate.id/blog.html">
-    <meta property="og:title" content="ELEVATE Insights | Gudang Ilmu Leadership & Bisnis">
-    <meta property="og:description" content="Upgrade mindset kepemimpinan Anda dengan wawasan praktis berbasis data dan psikologi.">
-    <meta property="og:image" content="https://elevate.id/img/og-blog.jpg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://elevate.id/blog.html">
-    <meta property="twitter:title" content="ELEVATE Insights | Gudang Ilmu Leadership & Bisnis">
-    <meta property="twitter:description" content="Strategi dan wawasan terbaru untuk pertumbuhan karir dan bisnis Anda.">
-    <meta property="twitter:image" content="https://elevate.id/img/og-blog.jpg">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    <meta name="theme-color" content="#030304">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "ELEVATE Insights",
-      "description": "Kumpulan artikel strategi kepemimpinan dan pengembangan diri.",
-      "url": "https://elevate.id/blog.html",
-      "publisher": {
-        "@type": "Organization",
-        "name": "ELEVATE Motivator Agency",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://elevate.id/img/logo.png"
-        }
-      },
-      "blogPost": [
-        {
-          "@type": "BlogPosting",
-          "headline": "5 Pilar Kepemimpinan di Era Digital",
-          "description": "Cara membangun empati digital dan kolaborasi tim hybrid.",
-          "image": "https://elevate.id/img/blog/blog1.webp",
-          "datePublished": "2026-01-10",
-          "author": { "@type": "Organization", "name": "ELEVATE" },
-          "url": "https://elevate.id/blog-detail.html"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Membongkar 'Limiting Belief' Anda",
-          "description": "Teknik psikologi untuk menghancurkan mental block.",
-          "image": "https://elevate.id/img/blog/blog2.webp",
-          "datePublished": "2026-01-05",
-          "url": "https://elevate.id/blog-detail.html"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Deep Work: Fokus Tanpa Distraksi",
-          "description": "Kemampuan fokus mendalam di dunia penuh notifikasi.",
-          "image": "https://elevate.id/img/blog/blog3.webp",
-          "datePublished": "2025-12-28",
-          "url": "https://elevate.id/blog-detail.html"
-        }
-      ]
-    }
-    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <style>
         /* =========================================
-           DESIGN TOKENS (Sama persis dengan Index)
+           DESIGN TOKENS
            ========================================= */
         :root {
             --bg-void: #030304;
@@ -90,17 +21,12 @@
             --text-main: #FFFFFF;
             --text-muted: #94A3B8;
             --border-dim: rgba(255, 255, 255, 0.1);
-            
             --accent-orange: #F7931A;
             --accent-burnt: #EA580C;
             --accent-gold: #FFD600;
-
             --grad-main: linear-gradient(to right, var(--accent-burnt), var(--accent-orange));
             --grad-gold: linear-gradient(to right, var(--accent-orange), var(--accent-gold));
-
             --shadow-orange: 0 0 20px -5px rgba(234, 88, 12, 0.5);
-            --shadow-gold: 0 0 20px rgba(255, 214, 0, 0.3);
-            
             --font-heading: 'Space Grotesk', sans-serif;
             --font-body: 'Inter', sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
@@ -117,252 +43,84 @@
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-        }
-
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
         img { display: block; max-width: 100%; height: auto; }
 
-        /* Utility Classes */
         .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        .text-gradient {
-            background: var(--grad-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
-        }
-        .font-mono { font-family: var(--font-mono); }
+        .text-gradient { background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
         .text-muted { color: var(--text-muted); }
         .text-center { text-align: center; }
+        .font-mono { font-family: var(--font-mono); }
 
-        /* Background Grid */
         .bg-grid {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
             background-size: 50px 50px;
-            background-image:
-                linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+            background-image: linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
             mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
-            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
         }
 
-        /* Buttons (Index Style) */
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center;
-            padding: 12px 32px; border-radius: 9999px; font-weight: 600;
-            font-family: var(--font-body); letter-spacing: 0.05em; text-transform: uppercase;
-            cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem;
-        }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 32px; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; }
         .btn-primary { background: var(--grad-main); color: white; box-shadow: var(--shadow-orange); border: none; }
         .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 30px -5px rgba(247, 147, 26, 0.8); }
 
-        /* Section Spacing */
         section { padding: 6rem 0; }
 
-        /* =========================================
-           NAVBAR (Persis Index.html)
-           ========================================= */
-        .navbar {
-            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-            background: rgba(3, 3, 4, 0.85); backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-dim); padding: 1rem 0;
-        }
+        /* Navbar */
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(3, 3, 4, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dim); padding: 1rem 0; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .brand {
-            font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700;
-            display: flex; align-items: center; gap: 0.5rem; z-index: 1002;
-        }
+        .brand { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
         .nav-links { display: flex; gap: 2rem; }
         .nav-links a { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); }
         .nav-links a:hover, .nav-links a.active { color: var(--accent-orange); }
         .nav-btn1 { display: none; }
 
-        /* =========================================
-           BLOG PAGE STYLES
-           ========================================= */
-        
+        /* Hero */
         .hero-blog { padding-top: 180px; padding-bottom: 60px; text-align: center; }
         .hero-blog h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; }
         
-        /* Search Bar Style */
-        .search-wrapper {
-            max-width: 600px;
-            margin: 0 auto 4rem;
-            position: relative;
-        }
-        
-        .search-input {
-            width: 100%;
-            padding: 1rem 1.5rem 1rem 3.5rem;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--border-dim);
-            border-radius: 99px;
-            color: white;
-            font-family: var(--font-body);
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .search-input:focus {
-            outline: none;
-            border-color: var(--accent-orange);
-            background: rgba(255,255,255,0.08);
-            box-shadow: 0 0 20px rgba(247,147,26,0.2);
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 1.2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            pointer-events: none;
-        }
+        /* Search */
+        .search-wrapper { max-width: 600px; margin: 0 auto 4rem; position: relative; }
+        .search-input { width: 100%; padding: 1rem 1.5rem 1rem 3.5rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-dim); border-radius: 99px; color: white; font-family: var(--font-body); font-size: 1rem; transition: all 0.3s ease; }
+        .search-input:focus { outline: none; border-color: var(--accent-orange); background: rgba(255,255,255,0.08); box-shadow: 0 0 20px rgba(247,147,26,0.2); }
+        .search-icon { position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.2rem; pointer-events: none; }
 
         /* Blog Grid */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .blog-card {
-            background: rgba(15, 17, 21, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-dim);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: 0.4s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(247, 147, 26, 0.5);
-            box-shadow: 0 10px 40px -10px rgba(247, 147, 26, 0.15);
-        }
-
-        .blog-thumb {
-            width: 100%;
-            height: 220px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .blog-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-            filter: grayscale(20%);
-        }
-
-        .blog-card:hover .blog-thumb img {
-            transform: scale(1.1);
-            filter: grayscale(0%);
-        }
-
-        .blog-content {
-            padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-tag {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.8rem;
-            display: inline-block;
-        }
-
-        .blog-title {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-            color: white;
-        }
-        
-        .blog-excerpt {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .blog-meta {
-            margin-top: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border-dim);
-            padding-top: 1rem;
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .read-more {
-            color: var(--accent-orange);
-            font-weight: 600;
-            display: flex; align-items: center; gap: 5px;
-            transition: 0.3s;
-        }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; }
+        .blog-card { background: rgba(15, 17, 21, 0.6); backdrop-filter: blur(12px); border: 1px solid var(--border-dim); border-radius: 16px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-5px); border-color: rgba(247, 147, 26, 0.5); box-shadow: 0 10px 40px -10px rgba(247, 147, 26, 0.15); }
+        .blog-thumb { width: 100%; height: 220px; overflow: hidden; position: relative; }
+        .blog-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; filter: grayscale(20%); }
+        .blog-card:hover .blog-thumb img { transform: scale(1.1); filter: grayscale(0%); }
+        .blog-content { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-tag { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; display: inline-block; }
+        .blog-title { font-size: 1.4rem; margin-bottom: 1rem; line-height: 1.3; color: white; }
+        .blog-excerpt { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .blog-meta { margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-dim); padding-top: 1rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); }
+        .read-more { color: var(--accent-orange); font-weight: 600; display: flex; align-items: center; gap: 5px; transition: 0.3s; }
         .read-more:hover { gap: 10px; }
-
-        /* Search Highlight Logic */
-        .blog-card.hidden {
-            display: none;
-        }
         
-        /* Empty State */
-        .no-results {
-            display: none;
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 4rem;
-            color: var(--text-muted);
-        }
+        /* Logic Classes */
+        .blog-card.hidden { display: none; } /* Untuk Search */
+        .blog-card.page-hidden { display: none; } /* Untuk Pagination */
+        .no-results { display: none; grid-column: 1 / -1; text-align: center; padding: 4rem; color: var(--text-muted); }
 
         /* Pagination */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 4rem;
-        }
-
+        .pagination { display: flex; justify-content: center; gap: 1rem; margin-top: 4rem; }
         .page-link {
-            width: 44px; height: 44px;
-            display: flex; align-items: center; justify-content: center;
-            border: 1px solid var(--border-dim);
-            border-radius: 50%;
-            color: var(--text-muted);
-            transition: 0.3s;
-            font-family: var(--font-mono);
+            width: auto; height: 44px; padding: 0 24px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border: 1px solid var(--border-dim); border-radius: 99px;
+            color: var(--text-muted); transition: 0.3s;
+            font-family: var(--font-mono); text-transform: uppercase; font-size: 0.85rem;
+            background: transparent; cursor: pointer;
         }
+        .page-link:hover:not(.disabled) { background: var(--accent-orange); color: white; border-color: var(--accent-orange); box-shadow: 0 0 15px rgba(247,147,26,0.4); }
+        .page-link.disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+        .pagination.hidden { display: none; } /* Sembunyikan saat searching */
 
-        .page-link:hover, .page-link.active {
-            background: var(--accent-orange);
-            color: white;
-            border-color: var(--accent-orange);
-            box-shadow: 0 0 15px rgba(247,147,26,0.4);
-        }
-
-        /* Footer & CTA & Floating (Persis Index) */
+        /* Footer & Floats */
         .cta-section { text-align: center; border-y: 1px solid var(--border-dim); background: linear-gradient(180deg, rgba(3,3,4,0), rgba(247,147,26,0.1)); }
         footer { padding: 4rem 0; background: #000; border-top: 1px solid var(--border-dim); }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; }
@@ -370,17 +128,13 @@
         .footer-col ul li { margin-bottom: 0.8rem; }
         .footer-col ul li a { color: var(--text-muted); font-size: 0.9rem; }
         .footer-col ul li a:hover { color: var(--accent-orange); padding-left: 5px; }
-
         .floating-controls { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
         .btn-float { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); }
         .btn-float:hover { transform: scale(1.1); }
         .btn-wa { background: var(--grad-main); box-shadow: 0 0 20px #ea5a0cab; border: none; }
-        .btn-wa:hover { box-shadow: 0 0 30px #f7941ac0; }
         .btn-top { background: rgba(15, 17, 21, 0.7); backdrop-filter: blur(10px); border: 1px solid var(--border-dim); opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.4s ease; }
-        .btn-top:hover { border-color: var(--accent-orange); color: var(--accent-orange); }
         .btn-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
 
-        /* Responsive */
         @media (max-width: 768px) {
             section { padding: 4rem 0; }
             .container { padding: 0 20px; }
@@ -388,8 +142,7 @@
             .nav-container { display: grid; grid-template-columns: 1fr auto; gap: 1rem; }
             .nav-links { grid-column: 1 / -1; display: flex; overflow-x: auto; white-space: nowrap; padding-bottom: 5px; gap: 1.5rem; -webkit-overflow-scrolling: touch; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem; }
             .nav-links::-webkit-scrollbar { display: none; }
-            .nav-btn1 { display: block; } 
-            .nav-btn2 { display: none; }
+            .nav-btn1 { display: block; } .nav-btn2 { display: none; }
             .hero-blog { padding-top: 140px; }
             .blog-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -408,9 +161,7 @@
                 <i class="ph-fill ph-lightning" style="color: var(--accent-orange);"></i>
                 ELEVATE<span style="color: var(--accent-orange);">.</span>
             </a>
-            
             <a href="contact.html" class="nav-btn1 btn btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Book Now</a>
-
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">Tentang</a>
@@ -419,7 +170,6 @@
                 <a href="blog.html" class="active" style="color: var(--accent-orange);">Blog</a>
                 <a href="contact.html">Kontak</a>
             </div>
-
             <a href="contact.html" class="nav-btn2 btn btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Book Now</a>
         </div>
     </nav>
@@ -438,125 +188,121 @@
             
             <div class="search-wrapper">
                 <i class="ph-bold ph-magnifying-glass search-icon"></i>
-                <input type="text" id="searchInput" class="search-input" placeholder="Cari artikel">
+                <input type="text" id="searchInput" class="search-input" placeholder="Cari artikel (contoh: Leadership, Mindset)...">
             </div>
 
             <div class="blog-grid" id="blogContainer">
                 
-                <article class="blog-card">
-                    <div class="blog-thumb">
-                        <img src="img/blog/blog1.webp" alt="Leadership" width="400" height="220" fetchpriority="high">
-                    </div>
+                <article class="blog-card" data-index="1">
+                    <div class="blog-thumb"><img src="img/blog/blog1.webp" alt="Leadership"></div>
                     <div class="blog-content">
                         <span class="blog-tag">LEADERSHIP</span>
                         <h3 class="blog-title">5 Pilar Kepemimpinan di Era Digital</h3>
-                        <p class="blog-excerpt">
-                            Pemimpin modern tidak bisa lagi menggunakan gaya komando kaku. Pelajari cara membangun empati digital dan kolaborasi tim hybrid.
-                        </p>
-                        <div class="blog-meta">
-                            <span>10 Jan 2026</span>
-                            <a href="blog-detail.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a>
-                        </div>
+                        <p class="blog-excerpt">Pemimpin modern tidak bisa lagi menggunakan gaya komando kaku. Pelajari cara membangun empati digital dan kolaborasi.</p>
+                        <div class="blog-meta"><span>10 Jan 2026</span><a href="blog-detail.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a></div>
                     </div>
                 </article>
 
-                <article class="blog-card">
-                    <div class="blog-thumb">
-                        <img src="img/blog/blog2.webp" alt="Mindset" width="400" height="220" loading="lazy">
-                    </div>
+                <article class="blog-card" data-index="2">
+                    <div class="blog-thumb"><img src="img/blog/blog2.webp" alt="Mindset"></div>
                     <div class="blog-content">
                         <span class="blog-tag">MINDSET</span>
                         <h3 class="blog-title">Membongkar 'Limiting Belief' Anda</h3>
-                        <p class="blog-excerpt">
-                            Sering merasa tidak mampu sebelum mencoba? Itu adalah limiting belief. Berikut teknik psikologi untuk menghancurkannya permanen.
-                        </p>
-                        <div class="blog-meta">
-                            <span>05 Jan 2026</span>
-                            <a href="blog-detail.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a>
-                        </div>
+                        <p class="blog-excerpt">Sering merasa tidak mampu sebelum mencoba? Itu adalah limiting belief. Berikut teknik psikologi untuk menghancurkannya.</p>
+                        <div class="blog-meta"><span>05 Jan 2026</span><a href="blog-limiting-belief.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a></div>
                     </div>
                 </article>
 
-                <article class="blog-card">
-                    <div class="blog-thumb">
-                        <img src="img/blog/blog3.webp" alt="Productivity" width="400" height="220" loading="lazy">
-                    </div>
+                <article class="blog-card" data-index="3">
+                    <div class="blog-thumb"><img src="img/blog/blog3.webp" alt="Productivity"></div>
                     <div class="blog-content">
                         <span class="blog-tag">PRODUCTIVITY</span>
                         <h3 class="blog-title">Deep Work: Fokus Tanpa Distraksi</h3>
-                        <p class="blog-excerpt">
-                            Di dunia yang penuh notifikasi, kemampuan untuk fokus mendalam (Deep Work) adalah superpower baru. Ini cara melatihnya.
-                        </p>
-                        <div class="blog-meta">
-                            <span>28 Dec 2025</span>
-                            <a href="blog-detail.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a>
-                        </div>
+                        <p class="blog-excerpt">Di dunia yang penuh notifikasi, kemampuan untuk fokus mendalam (Deep Work) adalah superpower baru.</p>
+                        <div class="blog-meta"><span>28 Dec 2025</span><a href="blog-deep-work.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a></div>
                     </div>
                 </article>
 
-                <article class="blog-card">
-                    <div class="blog-thumb">
-                        <img src="img/blog/blog4.webp" alt="Culture" width="400" height="220" loading="lazy">
-                    </div>
+                <article class="blog-card" data-index="4">
+                    <div class="blog-thumb"><img src="img/blog/blog4.webp" alt="Culture"></div>
                     <div class="blog-content">
                         <span class="blog-tag">CORPORATE</span>
                         <h3 class="blog-title">Membangun Budaya Perusahaan Juara</h3>
-                        <p class="blog-excerpt">
-                            Culture eats strategy for breakfast. Strategi sebagus apapun akan gagal jika budaya tim Anda toxic.
-                        </p>
-                        <div class="blog-meta">
-                            <span>15 Dec 2025</span>
-                            <a href="blog-detail.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a>
-                        </div>
+                        <p class="blog-excerpt">Culture eats strategy for breakfast. Strategi sebagus apapun akan gagal jika budaya tim Anda toxic.</p>
+                        <div class="blog-meta"><span>15 Dec 2025</span><a href="blog-culture.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a></div>
                     </div>
                 </article>
 
-                <article class="blog-card">
-                    <div class="blog-thumb">
-                        <img src="img/blog/blog5.webp" alt="Public Speaking" width="400" height="220" loading="lazy">
-                    </div>
+                <article class="blog-card" data-index="5">
+                    <div class="blog-thumb"><img src="img/blog/blog5.webp" alt="Public Speaking"></div>
                     <div class="blog-content">
                         <span class="blog-tag">SKILLS</span>
                         <h3 class="blog-title">Public Speaking untuk Introvert</h3>
-                        <p class="blog-excerpt">
-                            Anda pendiam? Bukan masalah. Justru introvert memiliki kekuatan observasi yang membuat materi bicara lebih dalam.
-                        </p>
-                        <div class="blog-meta">
-                            <span>01 Dec 2025</span>
-                            <a href="blog-detail.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a>
-                        </div>
+                        <p class="blog-excerpt">Anda pendiam? Bukan masalah. Justru introvert memiliki kekuatan observasi yang membuat materi bicara lebih dalam.</p>
+                        <div class="blog-meta"><span>01 Dec 2025</span><a href="blog-public-speaking.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a></div>
                     </div>
                 </article>
 
-                <article class="blog-card">
-                    <div class="blog-thumb">
-                        <img src="img/blog/blog6.webp" alt="Career" width="400" height="220" loading="lazy">
-                    </div>
+                <article class="blog-card" data-index="6">
+                    <div class="blog-thumb"><img src="img/blog/blog6.webp" alt="Career"></div>
                     <div class="blog-content">
                         <span class="blog-tag">CAREER</span>
                         <h3 class="blog-title">Negosiasi Gaji dengan Data</h3>
-                        <p class="blog-excerpt">
-                            Jangan minta naik gaji pakai perasaan. Gunakan data pencapaian dan riset pasar. Ini template negosiasinya.
-                        </p>
-                        <div class="blog-meta">
-                            <span>20 Nov 2025</span>
-                            <a href="blog-detail.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a>
-                        </div>
+                        <p class="blog-excerpt">Jangan minta naik gaji pakai perasaan. Gunakan data pencapaian dan riset pasar. Ini template negosiasinya.</p>
+                        <div class="blog-meta"><span>20 Nov 2025</span><a href="blog-salary-negotiation.html" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a></div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-index="7">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=1000&auto=format&fit=crop" alt="Branding">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-tag">BRANDING</span>
+                        <h3 class="blog-title">Membangun Personal Brand Kuat</h3>
+                        <p class="blog-excerpt">Di era digital, reputasi adalah mata uang. Pelajari cara membangun citra profesional yang otentik di LinkedIn.</p>
+                        <div class="blog-meta"><span>12 Nov 2025</span><a href="#" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a></div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-index="8">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop" alt="Delegation">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-tag">MANAGEMENT</span>
+                        <h3 class="blog-title">Seni Pendelegasian Tugas</h3>
+                        <p class="blog-excerpt">Pemimpin hebat tidak bekerja sendiri. Temukan strategi delegasi yang memberdayakan tim tanpa kehilangan kualitas.</p>
+                        <div class="blog-meta"><span>05 Nov 2025</span><a href="#" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a></div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-index="9">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000&auto=format&fit=crop" alt="Mindfulness">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-tag">WELLNESS</span>
+                        <h3 class="blog-title">Mindfulness untuk Profesional</h3>
+                        <p class="blog-excerpt">Teknik meditasi singkat untuk meredakan stres di tengah deadline ketat. Jaga kesehatan mental Anda agar performa prima.</p>
+                        <div class="blog-meta"><span>28 Oct 2025</span><a href="#" class="read-more">Baca <i class="ph-bold ph-arrow-right"></i></a></div>
                     </div>
                 </article>
 
                 <div class="no-results" id="noResults">
                     <h3><i class="ph-duotone ph-magnifying-glass" style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1rem;"></i></h3>
-                    <p>Artikel tidak ditemukan. Coba kata kunci lain.</p>
+                    <p>Artikel tidak ditemukan.</p>
                 </div>
 
             </div>
 
-            <div class="pagination">
-                <a href="#" class="page-link active">1</a>
-                <a href="blog2.html" class="page-link">2</a>
-                <a href="blog3.html" class="page-link">3</a>
-                <a href="blog4.html" class="page-link"><i class="ph-bold ph-caret-right"></i></a>
+            <div class="pagination" id="paginationControl">
+                <button class="page-link disabled" id="prevBtn" onclick="changePage(-1)">
+                    <i class="ph-bold ph-caret-left" style="margin-right: 5px;"></i> PREV
+                </button>
+                <button class="page-link" id="nextBtn" onclick="changePage(1)">
+                    NEXT <i class="ph-bold ph-caret-right" style="margin-left: 5px;"></i>
+                </button>
             </div>
 
         </div>
@@ -628,7 +374,7 @@
     </div>
 
     <script>
-        // 1. Scroll to Top Logic
+        // 1. Scroll to Top
         const scrollBtn = document.getElementById('scrollTopBtn');
         window.onscroll = function() {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -641,33 +387,103 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 2. Search Functionality
+        // 2. Pagination & Search Logic (Combined)
+        const itemsPerPage = 6;
+        let currentPage = 1;
+        const allArticles = document.querySelectorAll('.blog-card');
+        const totalItems = allArticles.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const paginationControl = document.getElementById('paginationControl');
         const searchInput = document.getElementById('searchInput');
-        const articles = document.querySelectorAll('.blog-card');
         const noResults = document.getElementById('noResults');
 
+        // Function to display items based on current page
+        function renderPage() {
+            // Scroll to top of grid smoothly
+            const gridTop = document.querySelector('.blog-grid').offsetTop - 150;
+            window.scrollTo({ top: gridTop, behavior: 'smooth' });
+
+            allArticles.forEach(article => {
+                const index = parseInt(article.getAttribute('data-index'));
+                const start = (currentPage - 1) * itemsPerPage + 1;
+                const end = currentPage * itemsPerPage;
+
+                if (index >= start && index <= end) {
+                    article.classList.remove('page-hidden');
+                    // Add simple fade animation
+                    article.style.animation = 'fadeIn 0.5s ease forwards';
+                } else {
+                    article.classList.add('page-hidden');
+                }
+            });
+
+            // Update Buttons
+            if (currentPage === 1) {
+                prevBtn.classList.add('disabled');
+            } else {
+                prevBtn.classList.remove('disabled');
+            }
+
+            if (currentPage === totalPages) {
+                nextBtn.classList.add('disabled');
+            } else {
+                nextBtn.classList.remove('disabled');
+            }
+        }
+
+        // Change page function
+        window.changePage = function(direction) {
+            currentPage += direction;
+            renderPage();
+        }
+
+        // Initialize First Page
+        renderPage();
+
+        // 3. Search Functionality (Overrides Pagination)
         searchInput.addEventListener('keyup', (e) => {
             const searchTerm = e.target.value.toLowerCase();
             let hasResults = false;
 
-            articles.forEach(article => {
-                const title = article.querySelector('.blog-title').textContent.toLowerCase();
-                const excerpt = article.querySelector('.blog-excerpt').textContent.toLowerCase();
-                const tag = article.querySelector('.blog-tag').textContent.toLowerCase();
+            if (searchTerm.length > 0) {
+                // Disable Pagination view
+                paginationControl.classList.add('hidden');
+                
+                allArticles.forEach(article => {
+                    // Reset pagination hiding
+                    article.classList.remove('page-hidden'); 
+                    
+                    const title = article.querySelector('.blog-title').textContent.toLowerCase();
+                    const excerpt = article.querySelector('.blog-excerpt').textContent.toLowerCase();
+                    const tag = article.querySelector('.blog-tag').textContent.toLowerCase();
 
-                if (title.includes(searchTerm) || excerpt.includes(searchTerm) || tag.includes(searchTerm)) {
-                    article.classList.remove('hidden');
-                    hasResults = true;
+                    if (title.includes(searchTerm) || excerpt.includes(searchTerm) || tag.includes(searchTerm)) {
+                        article.classList.remove('hidden');
+                        hasResults = true;
+                    } else {
+                        article.classList.add('hidden');
+                    }
+                });
+
+                if (hasResults) {
+                    noResults.style.display = 'none';
                 } else {
-                    article.classList.add('hidden');
+                    noResults.style.display = 'block';
                 }
-            });
 
-            // Show "No Results" message if everything is hidden
-            if (hasResults) {
-                noResults.style.display = 'none';
             } else {
-                noResults.style.display = 'block';
+                // Search cleared: Restore Pagination
+                paginationControl.classList.remove('hidden');
+                noResults.style.display = 'none';
+                
+                // Clear hidden class from search
+                allArticles.forEach(article => article.classList.remove('hidden'));
+                
+                // Re-apply current page logic
+                renderPage(); 
             }
         });
     </script>
